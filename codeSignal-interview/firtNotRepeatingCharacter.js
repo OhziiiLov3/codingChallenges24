@@ -44,3 +44,18 @@ const firstDuplicate = (arr) =>{
 
 console.log(firstDuplicate([2, 1, 3, 5, 3, 2]));
 console.log(firstDuplicate([2, 4, 3, 5,4,1]));
+
+
+// usig a set 
+const firstDuplicate2 = (arr) => {
+    const seen = new Set();
+
+    for (let num of arr) {
+        if (seen.has(num)) {
+            return num;
+        } else {
+            seen.add(num);
+        }
+    }
+    return -1;
+};
